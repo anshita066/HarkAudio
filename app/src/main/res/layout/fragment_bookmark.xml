@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/bookmark"
-    tools:context="com.harkaudio.BookmarkFragment">
+    tools:context="com.harkaudio.fragments.bookmark.BookmarkFragment">
 
     <TextView
         android:layout_width="match_parent"
@@ -13,5 +13,14 @@
         android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@color/teal_200"/>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About us"
+        android:layout_marginTop="420dp"
+        android:backgroundTint="@color/Acid_Green"
+        android:layout_gravity="center_horizontal"/>
 
 </FrameLayout>

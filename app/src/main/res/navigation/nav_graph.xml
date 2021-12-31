@@ -3,44 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/main">
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.harkaudio.MainFragment"
+        android:id="@+id/main"
+        android:name="com.harkaudio.fragments.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/home" />
         <action
             android:id="@+id/action_mainFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
+            app:destination="@id/search" />
         <action
             android:id="@+id/action_mainFragment_to_libraryFragment"
-            app:destination="@id/libraryFragment" />
+            app:destination="@id/library" />
         <action
             android:id="@+id/action_mainFragment_to_bookmarkFragment"
-            app:destination="@id/bookmarkFragment" />
+            app:destination="@id/bookmark" />
     </fragment>
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.harkaudio.HomeFragment"
+        android:id="@+id/home"
+        android:name="com.harkaudio.fragments.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/searchFragment"
-        android:name="com.harkaudio.SearchFragment"
+        android:id="@+id/search"
+        android:name="com.harkaudio.fragments.search.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
     <fragment
-        android:id="@+id/libraryFragment"
-        android:name="com.harkaudio.LibraryFragment"
+        android:id="@+id/library"
+        android:name="com.harkaudio.fragments.library.LibraryFragment"
         android:label="fragment_library"
         tools:layout="@layout/fragment_library" />
     <fragment
-        android:id="@+id/bookmarkFragment"
-        android:name="com.harkaudio.BookmarkFragment"
+        android:id="@+id/bookmark"
+        android:name="com.harkaudio.fragments.bookmark.BookmarkFragment"
         android:label="fragment_bookmark"
         tools:layout="@layout/fragment_bookmark" />
 </navigation>
