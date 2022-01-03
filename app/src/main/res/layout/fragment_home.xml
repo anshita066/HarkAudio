@@ -12,7 +12,8 @@
         android:text="Welcome to Home"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:textColor="@color/purple_200"/>
+        android:textColor="@color/purple_200"
+        />
 
     <Button
         android:id="@+id/btn1"
@@ -21,7 +22,8 @@
         android:text="About us"
         android:layout_marginTop="420dp"
         android:backgroundTint="@color/Acid_Green"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        />
 
 
 </FrameLayout>

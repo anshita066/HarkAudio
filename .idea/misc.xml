@@ -3,15 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.189873417721519" />
-        <entry key="app/src/main/res/layout/fragment_about.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_about.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_bookmark.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_find.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_know_more.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_library.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_new.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_new_record.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_saved.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_saved_bookmark.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/main_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.19322916666666667" />
@@ -29,7 +32,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.22" />
+        <option name="scale" value="0.189873417721519" />
       </ProjectState>
     </option>
   </component>

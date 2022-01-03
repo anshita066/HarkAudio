@@ -1,23 +1,44 @@
 package com.harkaudio
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.annotation.RequiresApi
+import androidx.lifecycle.LiveData
+import androidx.navigation.NavController
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.navigation.findNavController
 import com.harkaudio.replica.R
 
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    private var navController : LiveData<NavController>? = null
+
+    @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setUpNavigation();
+//        setUpNavigation()
+
+        if(savedInstanceState == null) {
+            setUpBottomNavigation()
+        }
+
     }
-        private fun setUpNavigation() {
+
+    @RequiresApi(Build.VERSION_CODES.S)
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        setUpBottomNavigation()
+    }
+/*        private fun setUpNavigation() {
 
             val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNav)
 
@@ -28,6 +49,28 @@ class MainActivity : AppCompatActivity() {
                 findNavController(R.id.nav_host_fragment)
             )
         }
+*/
+
+
+    @RequiresApi(Build.VERSION_CODES.S)
+    private fun setUpBottomNavigation() {
+       val graphsId = listOf(R.navigation.nav_graph, R.navigation.home, R.navigation.search,
+       R.navigation.library, R.navigation.bookmark)
+
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
+
+
+        val controller =  bottomNav.setupWithNavController(
+            graphsId,
+            supportFragmentManager,
+            R.id.nav_host_fragment,
+            intent
+
+        )
+
+
+        navController = controller
+    }
 
 }
 

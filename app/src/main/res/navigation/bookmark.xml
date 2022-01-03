@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bookmark"
+    app:startDestination="@id/bookmarkFragment">
+
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.harkaudio.fragments.bookmark.BookmarkFragment"
+        android:label="fragment_bookmark"
+        tools:layout="@layout/fragment_bookmark" >
+        <action
+            android:id="@+id/action_bookmarkFragment_to_savedBookmarkFragment"
+            app:destination="@id/savedBookmarkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedBookmarkFragment"
+        android:name="com.harkaudio.fragments.bookmark.SavedBookmarkFragment"
+        android:label="fragment_saved_bookmark"
+        tools:layout="@layout/fragment_saved_bookmark" />
+</navigation>
