@@ -1,20 +1,22 @@
 package com.harkaudio.fragments.search
 
 import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.appcompat.app.AppCompatActivity
+import com.harkaudio.data.Data
 import com.harkaudio.replica.R
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_search.*
 
-class SearchFragment : Fragment(R.layout.fragment_search) {
+class SearchFragment : AppCompatActivity() {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.fragment_search)
 
-        searchbtn1.setOnClickListener {
-            findNavController().navigate(R.id.search1fragment)
-        }
+        val controller = HomeController()
+        epoxyview.setController(controller)
+
+        controller.allMessages = Data.messages
+        controller.recentlyActive = Data.recentlyActive
     }
 }

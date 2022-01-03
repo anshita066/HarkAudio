@@ -67,10 +67,12 @@ class MainActivity : AppCompatActivity() {
             intent
 
         )
-
-
         navController = controller
+
     }
+
+
+
 
 }
 

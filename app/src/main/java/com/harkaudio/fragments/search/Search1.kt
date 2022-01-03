@@ -1,21 +1,40 @@
 package com.harkaudio.fragments.search
 
-
-import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import android.widget.ImageView
+import androidx.appcompat.widget.AppCompatTextView
+import com.airbnb.epoxy.EpoxyAttribute
+import com.airbnb.epoxy.EpoxyHolder
+import com.airbnb.epoxy.EpoxyModelClass
+import com.airbnb.epoxy.EpoxyModelWithHolder
+import com.harkaudio.data.Message
 import com.harkaudio.replica.R
-import kotlinx.android.synthetic.main.fragment_search.*
-import kotlinx.android.synthetic.main.fragment_search1.*
 
-class Search1 : Fragment(R.layout.fragment_search1) {
+//MESSAGE
+@EpoxyModelClass(layout = R.layout.fragment_search)
+abstract class Search1 : EpoxyModelWithHolder<Search1.Holder>() {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    @EpoxyAttribute
+    lateinit var message: Message
 
-        btn1_search1.setOnClickListener {
-            findNavController().navigate(R.id.searchFragment)
+    override fun bind(holder: Holder) {
+        super.bind(holder)
+        with(message) {
+            holder.title.text = username
+            holder.content.text = content
+        }
+    }
+
+    class Holder : EpoxyHolder() {
+
+        lateinit var profileImage: ImageView
+        lateinit var title: AppCompatTextView
+        lateinit var content: AppCompatTextView
+
+        override fun bindView(itemView: View) {
+            profileImage = itemView.findViewById(R.id.searchimg1)
+            title = itemView.findViewById(R.id.searchtv1)
+            content = itemView.findViewById(R.id.searchtv2)
         }
     }
 }

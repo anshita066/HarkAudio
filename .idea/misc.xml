@@ -21,11 +21,14 @@
         <entry key="app/src/main/res/layout/fragment_new_record.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_saved.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_saved_bookmark.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_search1.xml" value="0.12454710144927536" />
+        <entry key="app/src/main/res/layout/fragment_search2.xml" value="0.12454710144927536" />
+        <entry key="app/src/main/res/layout/fragment_search3.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/main2.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/main3.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/main_fragment.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/search2.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.19322916666666667" />

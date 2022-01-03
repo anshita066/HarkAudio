@@ -2,45 +2,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.harkaudio.fragments.search.SearchFragment">
 
-    <TextView
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Welcome to Search"-->
+<!--        android:textSize="40sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@color/purple_500"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/searchbtn1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="search1"-->
+<!--        android:layout_marginTop="420dp"-->
+<!--        android:backgroundTint="@color/Acid_Green"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/searchbtn2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="search2"-->
+<!--        android:layout_marginTop="480dp"-->
+<!--        android:backgroundTint="@color/Acid_Green"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/searchbtn3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="search3"-->
+<!--        android:layout_marginTop="540dp"-->
+<!--        android:backgroundTint="@color/Acid_Green"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        />-->
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/epoxyview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Welcome to Search"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:textColor="@color/purple_500"/>
-
-    <Button
-        android:id="@+id/searchbtn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="search1"
-        android:layout_marginTop="420dp"
-        android:backgroundTint="@color/Acid_Green"
-        android:layout_gravity="center_horizontal"
-        />
-
-    <Button
-        android:id="@+id/searchbtn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="search2"
-        android:layout_marginTop="480dp"
-        android:backgroundTint="@color/Acid_Green"
-        android:layout_gravity="center_horizontal"
-        />
-
-    <Button
-        android:id="@+id/searchbtn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="search3"
-        android:layout_marginTop="540dp"
-        android:backgroundTint="@color/Acid_Green"
-        android:layout_gravity="center_horizontal"
-        />
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/fragment_search1" />
 
 </FrameLayout>
