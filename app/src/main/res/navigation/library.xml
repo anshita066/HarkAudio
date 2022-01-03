@@ -12,11 +12,11 @@
         tools:layout="@layout/fragment_library" >
         <action
             android:id="@+id/action_libraryFragment_to_newRecordFragment"
-            app:destination="@id/newRecordFragment" />
+            app:destination="@id/library1fragment" />
     </fragment>
     <fragment
-        android:id="@+id/newRecordFragment"
-        android:name="com.harkaudio.fragments.library.NewRecordFragment"
+        android:id="@+id/library1fragment"
+        android:name="com.harkaudio.fragments.library.Library1"
         android:label="fragment_new_record"
-        tools:layout="@layout/fragment_new_record" />
+        tools:layout="@layout/fragment_library1" />
 </navigation>

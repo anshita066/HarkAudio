@@ -2,22 +2,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.harkaudio.fragments.search.SearchFragment">
+    tools:context="com.harkaudio.fragments.home.Home2">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/tv_home2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Welcome to Bookmark"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:textColor="@color/purple_500"/>
+        android:text="Welcome to Home2 Page"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:textColor="@color/Bean_Red"/>
 
     <Button
-        android:id="@+id/bookmarkbtn1"
+        android:id="@+id/btn_home2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="bookmark1"
+        android:text="home3"
         android:layout_marginTop="420dp"
         android:backgroundTint="@color/Acid_Green"
         android:layout_gravity="center_horizontal"

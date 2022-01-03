@@ -12,11 +12,11 @@
         tools:layout="@layout/fragment_search" >
         <action
             android:id="@+id/action_searchFragment_to_findFragment"
-            app:destination="@id/findFragment" />
+            app:destination="@id/search1fragment" />
     </fragment>
     <fragment
-        android:id="@+id/findFragment"
-        android:name="com.harkaudio.fragments.search.FindFragment"
+        android:id="@+id/search1fragment"
+        android:name="com.harkaudio.fragments.search.Search1"
         android:label="fragment_find"
-        tools:layout="@layout/fragment_find" />
+        tools:layout="@layout/fragment_search1" />
 </navigation>

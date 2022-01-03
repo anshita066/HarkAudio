@@ -2,48 +2,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/home"
-    tools:context="com.harkaudio.fragments.home.HomeFragment">
+    tools:context="com.harkaudio.fragments.home.Home1">
 
     <TextView
+        android:id="@+id/tv_home1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Welcome to Home"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:textColor="@color/purple_200"
-        />
-
+        android:text="Welcome to Home1 Page"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:textColor="@color/BurlyWood"/>
     <Button
-        android:id="@+id/homebtn1"
+        android:id="@+id/btn_home1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="home1"
+        android:text="home2"
         android:layout_marginTop="420dp"
         android:backgroundTint="@color/Acid_Green"
         android:layout_gravity="center_horizontal"
         />
-
     <Button
-        android:id="@+id/homebtn2"
+        android:id="@+id/btn2_home1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="home2"
+        android:text="Home"
         android:layout_marginTop="480dp"
         android:backgroundTint="@color/Acid_Green"
         android:layout_gravity="center_horizontal"
         />
-
-    <Button
-        android:id="@+id/homebtn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="home3"
-        android:layout_marginTop="540dp"
-        android:backgroundTint="@color/Acid_Green"
-        android:layout_gravity="center_horizontal"
-        />
-
 
 </FrameLayout>

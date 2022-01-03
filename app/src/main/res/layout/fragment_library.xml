@@ -15,11 +15,33 @@
         android:textColor="@color/teal_700"/>
 
     <Button
-        android:id="@+id/btn3"
+        android:id="@+id/librarybtn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="About us"
+        android:text="library1"
         android:layout_marginTop="420dp"
         android:backgroundTint="@color/Acid_Green"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/librarybtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="library2"
+        android:layout_marginTop="480dp"
+        android:backgroundTint="@color/Acid_Green"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/librarybtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="library3"
+        android:layout_marginTop="540dp"
+        android:backgroundTint="@color/Acid_Green"
+        android:layout_gravity="center_horizontal"
+        />
+
 </FrameLayout>

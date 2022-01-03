@@ -5,20 +5,47 @@
     android:id="@+id/home"
     app:startDestination="@id/homeFragment">
 
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.harkaudio.fragments.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home"
-        >
+        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_aboutFragment"
-            app:destination="@id/aboutFragment"
-            />
+            android:id="@+id/action_homeFragment_to_home1fragment"
+            app:destination="@id/home1fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_home2fragment"
+            app:destination="@id/home2fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_home3fragment"
+            app:destination="@id/home3fragment" />
     </fragment>
     <fragment
-        android:id="@+id/aboutFragment"
-        android:name="com.harkaudio.fragments.home.AboutFragment"
-        android:label="fragment_about"
-        tools:layout="@layout/fragment_about" />
+        android:id="@+id/home1fragment"
+        android:name="com.harkaudio.fragments.home.Home1"
+        android:label="fragment_home1"
+        tools:layout="@layout/fragment_home1" >
+        <action
+            android:id="@+id/action_home1fragment_to_home2fragment"
+            app:destination="@id/home2fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2fragment"
+        android:name="com.harkaudio.fragments.home.Home2"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2" >
+        <action
+            android:id="@+id/action_home2fragment_to_home3fragment"
+            app:destination="@id/home3fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/home3fragment"
+        android:name="com.harkaudio.fragments.home.Home3"
+        android:label="fragment_home3"
+        tools:layout="@layout/fragment_home3" >
+        <action
+            android:id="@+id/action_home3fragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

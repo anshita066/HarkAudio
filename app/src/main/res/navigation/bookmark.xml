@@ -12,11 +12,11 @@
         tools:layout="@layout/fragment_bookmark" >
         <action
             android:id="@+id/action_bookmarkFragment_to_savedBookmarkFragment"
-            app:destination="@id/savedBookmarkFragment" />
+            app:destination="@id/bookmark1fragment" />
     </fragment>
     <fragment
-        android:id="@+id/savedBookmarkFragment"
-        android:name="com.harkaudio.fragments.bookmark.SavedBookmarkFragment"
+        android:id="@+id/bookmark1fragment"
+        android:name="com.harkaudio.fragments.bookmark.Bookmark1"
         android:label="fragment_saved_bookmark"
-        tools:layout="@layout/fragment_saved_bookmark" />
+        tools:layout="@layout/fragment_bookmark1" />
 </navigation>

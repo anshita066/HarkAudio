@@ -2,16 +2,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.harkaudio.fragments.search.FindFragment">
+    tools:context="com.harkaudio.fragments.search.Search1">
 
     <TextView
-        android:id="@+id/tv_find"
+        android:id="@+id/tv_search1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Welcome to Find Page"
+        android:text="Welcome to Search1 Page"
         android:textSize="30sp"
         android:textStyle="italic"
         android:textColor="@color/Old_Burgundy"/>
+
+    <Button
+        android:id="@+id/btn1_search1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_marginTop="420dp"
+        android:backgroundTint="@color/Acid_Green"
+        android:layout_gravity="center_horizontal"
+        />
 
 </FrameLayout>

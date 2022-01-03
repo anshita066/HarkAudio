@@ -12,8 +12,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-    btn1.setOnClickListener {
-        findNavController().navigate(R.id.aboutFragment)
-    }
+                 homebtn1.setOnClickListener {
+                    findNavController().navigate(R.id.home1fragment)
+                }
+                homebtn2.setOnClickListener{
+                    findNavController().navigate(R.id.home2fragment)
+                }
+                homebtn3.setOnClickListener{
+                    findNavController().navigate(R.id.home3fragment)
+                }
     }
 }
