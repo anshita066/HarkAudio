@@ -8,6 +8,7 @@ import com.harkaudio.data.Profile
 
 class HomeController : EpoxyController() {
 
+
     var recentlyActive: List<Profile> = emptyList()
         set(value) {
             field = value
@@ -24,7 +25,7 @@ class HomeController : EpoxyController() {
             id("recently_active")
             title("Recently Active")
         }
-        val models =  recentlyActive.map{
+        val models = recentlyActive.map {
             RecentlyActiveItemModel_()
                 .id(it.id)
                 .profile(it)
@@ -39,14 +40,13 @@ class HomeController : EpoxyController() {
             id("all_messages")
             title("All Messages")
         }
-        allMessages.forEach {
-            messageItem {
-                id(it.id)
-                message(it)
-            }
+//        allMessages.forEach {
+//            search1 {
+//                id(it.id)
+//                message(it)
+//            }
+//
+//        }
 
     }
-
-
-
 }

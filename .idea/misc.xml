@@ -21,8 +21,8 @@
         <entry key="app/src/main/res/layout/fragment_new_record.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_saved.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_saved_bookmark.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/fragment_search1.xml" value="0.12454710144927536" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/fragment_search1.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_search2.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/fragment_search3.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/main2.xml" value="0.12454710144927536" />

@@ -25,7 +25,7 @@ abstract class HeaderItemModel : EpoxyModelWithHolder<HeaderItemModel.Holder>() 
         lateinit var title: AppCompatTextView
 
         override fun bindView(itemView: View) {
-            title = itemView.findViewById(R.id.header_title)
+            title = itemView.findViewById(R.id.search2tv)
         }
     }
 }
