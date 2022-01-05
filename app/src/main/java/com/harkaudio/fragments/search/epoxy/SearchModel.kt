@@ -1,12 +1,14 @@
-package com.harkaudio.fragments.search
+package com.harkaudio.fragments.search.epoxy
 
+/*
 import com.airbnb.epoxy.Carousel
 import com.airbnb.epoxy.EpoxyController
 import com.airbnb.epoxy.carousel
-import com.harkaudio.data.Message
-import com.harkaudio.data.Profile
+import com.harkaudio.fragments.search.data.Message
+import com.harkaudio.fragments.search.data.Profile
 
-class HomeController : EpoxyController() {
+//HomeController
+class SearchModel : EpoxyController() {
 
 
     var recentlyActive: List<Profile> = emptyList()
@@ -50,3 +52,4 @@ class HomeController : EpoxyController() {
 
     }
 }
+*/

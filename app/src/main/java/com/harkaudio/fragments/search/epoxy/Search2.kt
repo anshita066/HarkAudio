@@ -1,4 +1,4 @@
-package com.harkaudio.fragments.search
+package com.harkaudio.fragments.search.epoxy
 
 
 import android.view.View

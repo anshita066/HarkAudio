@@ -1,4 +1,4 @@
-package com.harkaudio.fragments.search
+package com.harkaudio.fragments.search.epoxy
 
 import android.view.View
 import android.widget.ImageView
@@ -7,7 +7,7 @@ import com.airbnb.epoxy.EpoxyAttribute
 import com.airbnb.epoxy.EpoxyHolder
 import com.airbnb.epoxy.EpoxyModelClass
 import com.airbnb.epoxy.EpoxyModelWithHolder
-import com.harkaudio.data.Profile
+import com.harkaudio.fragments.search.data.Profile
 import com.harkaudio.replica.R
 
 @EpoxyModelClass(layout = R.layout.fragment_search3)

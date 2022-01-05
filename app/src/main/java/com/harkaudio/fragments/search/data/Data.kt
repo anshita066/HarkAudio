@@ -1,4 +1,4 @@
-package com.harkaudio.data
+package com.harkaudio.fragments.search.data
 
 object Data {
 

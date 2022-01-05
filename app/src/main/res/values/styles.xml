@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/teal_700</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/purple_200</item>
-
+    <style name="GangsterRegular">
+        <item name="fontFamily">@font/gangstergrotesk</item>
     </style>
+    <style name="SFMono">
+        <item name="fontFamily">@font/sfmono</item></style>
+    <style name="LiteracyItalics">
+        <item name="fontFamily">@font/literacyitalic</item></style>
 </resources>
