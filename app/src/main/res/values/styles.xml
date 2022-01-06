@@ -19,4 +19,12 @@
 
     <style name="AppTheme.PopupOverlay"
         parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="GangsterRegular">
+        <item name="fontFamily">@font/gangstergrotesk</item>
+    </style>
+    <style name="SFMono">
+        <item name="fontFamily">@font/sfmono</item></style>
+    <style name="LiteracyItalics">
+        <item name="fontFamily">@font/literacyitalic</item></style>
 </resources>

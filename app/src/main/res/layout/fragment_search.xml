@@ -3,22 +3,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.harkaudio.fragments.search.SearchFragment">
 
+    <ImageView
+        android:id="@+id/searchicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_search"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="26dp"
+        />
+
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:id="@+id/editsearch"
+        android:layout_width="220dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/searchicon"
+        android:background="@color/transparent"
         android:hint="Search"
-        android:textSize="30sp"
-        android:textStyle="italic" />
+        android:layout_marginTop="23dp"/>
+
+    <ImageView
+        android:id="@+id/closeicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/editsearch"
+        android:src="@drawable/ic_close"
+        android:layout_marginTop="29.99dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        style="@style/GangsterRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/editsearch"
+        android:text="Cancel"
+        android:textSize="14dp"
+        android:lineHeight="15.4dp"
+        android:textAlignment="center"
+        android:textColor="#222222"
+        android:textFontWeight="400"
+        />
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_alignTop="@id/editsearch"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/ic_line_7" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#1db995">
-    </com.google.android.material.tabs.TabLayout>
+        android:layout_alignTop="@+id/line"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:tabBackground="@drawable/back_select"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="#222222"
+
+        />
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="wrap_content"
@@ -26,5 +79,6 @@
         android:layout_below="@id/tabLayout"
         android:layout_centerInParent="true"
         android:layout_marginTop="100dp"
-        tools:layout_editor_absoluteX="8dp" />
+        tools:layout_editor_absoluteX="8dp"
+        />
 </RelativeLayout>
