@@ -6,6 +6,16 @@ plugins {
     id 'com.google.gms.google-services'
     id 'kotlin-kapt'
 }
+android {
+
+    buildFeatures {
+
+        dataBinding true
+
+        // for view binding:
+        // viewBinding true
+    }
+}
 
 kapt {
     correctErrorTypes = true

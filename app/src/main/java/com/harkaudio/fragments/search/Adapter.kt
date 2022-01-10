@@ -4,16 +4,20 @@ import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import androidx.viewpager2.adapter.FragmentStateAdapter
 
-
-@Suppress("DEPRECATION")
-internal class MyAdapter(
+class MyAdapter(
     var context: Context,
-    fm: FragmentManager,
+    fa: Fragment,
     var totalTabs: Int
 ) :
-    FragmentPagerAdapter(fm) {
-    override fun getItem(position: Int): Fragment {
+    FragmentStateAdapter(fa) {
+
+    override fun getItemCount(): Int {
+        return totalTabs
+    }
+
+    override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> {
                 HarklistFragment()
@@ -27,10 +31,7 @@ internal class MyAdapter(
             3-> {
                 PodcastFragment()
             }
-            else -> getItem(position)
+            else -> HarklistFragment()
         }
-    }
-    override fun getCount(): Int {
-        return totalTabs
     }
 }

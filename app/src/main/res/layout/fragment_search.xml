@@ -58,6 +58,14 @@
         android:layout_marginTop="36dp"
         android:src="@drawable/ic_line_7" />
 
+    <TextView
+        android:id="@+id/tv_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tabLayout"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="16dp"/>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
@@ -72,13 +80,16 @@
 
         />
 
-    <androidx.viewpager.widget.ViewPager
+    <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tabLayout"
         android:layout_centerInParent="true"
         android:layout_marginTop="100dp"
-        tools:layout_editor_absoluteX="8dp"
-        />
+        tools:layout_editor_absoluteX="8dp">
+
+
+
+    </androidx.viewpager2.widget.ViewPager2>
 </RelativeLayout>
