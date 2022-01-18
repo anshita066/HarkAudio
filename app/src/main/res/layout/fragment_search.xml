@@ -10,20 +10,19 @@
         android:id="@+id/searchicon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_search"
         android:layout_marginLeft="14dp"
         android:layout_marginTop="26dp"
-        />
+        android:src="@drawable/ic_search" />
 
     <EditText
         android:id="@+id/editsearch"
         android:layout_width="220dp"
         android:layout_height="28dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="23dp"
         android:layout_toRightOf="@id/searchicon"
         android:background="@color/transparent"
-        android:hint="Search"
-        android:layout_marginTop="23dp"/>
+        android:hint="Search" />
 
     <ImageView
         android:id="@+id/closeicon"
@@ -69,16 +68,55 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignTop="@+id/line"
-        android:layout_marginTop="21dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="21dp"
         android:layout_marginRight="16dp"
         app:tabBackground="@drawable/back_select"
         app:tabSelectedTextColor="@color/white"
-        app:tabTextColor="#222222"
+        app:tabTextColor="#222222">
 
-        />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Harklisttab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harklist" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/clipstab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clips" />
+
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Profiletab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Podcasttab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Podcast" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tabLayout"
+        android:layout_marginTop="50dp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
@@ -88,6 +126,7 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="100dp"
         tools:layout_editor_absoluteX="8dp">
+
 
 
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -14,16 +15,21 @@ import com.harkaudio.replica.R
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.harkaudio.fragments.search.SearchFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     private var navController : LiveData<NavController>? = null
 
+    private lateinit var viewModel: SearchFragmentViewModel
+
     @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        viewModel = ViewModelProviders.of(this)[SearchFragmentViewModel::class.java]
 
 //        setUpNavigation()
 

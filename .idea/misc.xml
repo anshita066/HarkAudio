@@ -8,10 +8,12 @@
         <entry key="app/src/main/res/drawable-v24/ic_play_button.xml" value="0.18333333333333332" />
         <entry key="app/src/main/res/drawable/back_select.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/back_tabs.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.18425925925925926" />
+        <entry key="app/src/main/res/drawable/ic_play_button.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/round_corners.xml" value="0.209375" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="app/src/main/res/layout/data_items.xml" value="0.11277173913043478" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_bookmark.xml" value="0.19322916666666667" />
@@ -44,6 +46,7 @@
         <entry key="app/src/main/res/layout/search2.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.18425925925925926" />
       </map>

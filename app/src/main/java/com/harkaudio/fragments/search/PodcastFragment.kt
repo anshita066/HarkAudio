@@ -1,10 +1,12 @@
 package com.harkaudio.fragments.search
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import com.harkaudio.replica.R
 
 class PodcastFragment : Fragment() {
@@ -15,6 +17,13 @@ class PodcastFragment : Fragment() {
             R.layout.fragment_podcasts, container, false
         )
     }
-    // Here "layout_login" is a name of layout file
-    // created for LoginFragment
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        if (parentFragment is SearchFragment){
+            (parentFragment as SearchFragment).textChangeLiveData.observe(viewLifecycleOwner, Observer {
+                Log.i("PodcastFragment", "text updated: $it")
+            })
+        }
+    }
 }
