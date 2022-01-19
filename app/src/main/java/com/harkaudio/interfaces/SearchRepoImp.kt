@@ -53,7 +53,7 @@ class SearchRepoImp : SearchRepo, CustomParser() {
 
                         //Logic for sending data to Custom parser for parsing
 //
-                        fetchSearchResponse.value = CustomParser().parseQuestion(Gson().toJson(response.body()))
+                        fetchSearchResponse.value = CustomParser().parseQuestion(Gson().toJson(response.body()).toString())
 
                     }
 

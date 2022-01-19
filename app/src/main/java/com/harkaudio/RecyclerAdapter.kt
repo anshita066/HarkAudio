@@ -10,15 +10,12 @@ import android.widget.Filter
 import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.harkaudio.ProductUrl
 import com.harkaudio.ProductUrl.profileImageFormat
 import com.harkaudio.dataclasses.Question
 
 import com.harkaudio.replica.R
-import com.harkaudio.replica.databinding.ActivityMainBinding.inflate
 
 class RecyclerAdapter(
     private var titleList: MutableList<Question>,
@@ -115,6 +112,7 @@ class RecyclerAdapter(
 
 
     }
+
 
     fun setItems(titleList: ArrayList<Question>) {
 
