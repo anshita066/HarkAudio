@@ -22,6 +22,10 @@ import java.util.*
 
 class SearchFragment : Fragment(R.layout.fragment_search) {
 
+//    private lateinit var viewModel: SearchFragmentViewModel
+
+
+
     lateinit var onTextChange: (String) -> Unit
     val textChangeLiveData = MutableLiveData<String>()
 
@@ -30,6 +34,13 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     @SuppressLint("CheckResult")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //view model
+//        viewModel = ViewModelProvider(this,
+//            ViewModelProvider.AndroidViewModelFactory.getInstance(activity!!.application)).get(
+//                SearchFragmentViewModel::class.java)
+
+
 
 
         onTextChange = debounce(
@@ -95,6 +106,10 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                 delay(waitMs)
                 if (param is String) {
                     if (param.isNotBlank()) {
+
+//                        viewModel.changedTextLiveData.observe(viewLifecycleOwner, Observer<String> { item ->
+//                            viewModel.changeText(param)
+//                        })
 
 //                        setScreen(SearchViewModel.ExploreScreenType.Tab)
 //                        rightButton.setViewVisibility(true)

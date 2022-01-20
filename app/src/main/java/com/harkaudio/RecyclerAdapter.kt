@@ -17,22 +17,19 @@ import com.harkaudio.dataclasses.Question
 
 import com.harkaudio.replica.R
 
-class RecyclerAdapter(
-    private var titleList: MutableList<Question>,
-
-    ) : Filterable, RecyclerView.Adapter<RecyclerAdapter.MyHolder>() {
-
+class RecyclerAdapter() : Filterable, RecyclerView.Adapter<RecyclerAdapter.MyHolder>() {
+    private var questionList: MutableList<Question> = java.util.ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.data_items, parent, false)
         return MyHolder(v)
     }
 
-    override fun getItemCount(): Int = titleList.size
+    override fun getItemCount(): Int = questionList.size
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
 
-        val quesTitle = titleList[position]
+        val quesTitle = questionList[position]
         quesTitle.creator.name
 
         val title = quesTitle.title ?: "unknown"
@@ -41,13 +38,13 @@ class RecyclerAdapter(
         holder.creatorName.text = quesTitle.creator.name
         holder.clipCount.text = quesTitle.answerCount.toString()
 
-        var min = (quesTitle.clipRuntime)/60
+        var min = (quesTitle.clipRuntime) / 60
 
-        val hr = min/60
+        val hr = min / 60
 
         holder.min.text = min.toString()
 
-        if (min > 60){
+        if (min > 60) {
             min -= 60
             holder.min.text = min.toString()
 
@@ -55,34 +52,44 @@ class RecyclerAdapter(
             holder.hr.text = hr.toString()
         }
 
-      //  holder.contributor.text = quesTitle.sponsor.name
+        //  holder.contributor.text = quesTitle.sponsor.name
 
-            val creatorImage = String.format(profileImageFormat,  quesTitle.creator.uid )
+        val creatorImage = String.format(profileImageFormat, quesTitle.creator.uid)
 
-            val imageHolder = holder.iv6
+        val imageHolder = holder.iv6
 
-            Glide.with(holder.itemView)
-                .load(creatorImage)
-                .into(imageHolder)
+        Glide.with(holder.itemView)
+            .load(creatorImage)
+            .into(imageHolder)
 
 
-       holder.rootLayout.background.colorFilter =
+        holder.rootLayout.background.colorFilter =
             PorterDuffColorFilter(
-                Color.parseColor("#"+quesTitle.color),
+                Color.parseColor("#" + quesTitle.color),
                 PorterDuff.Mode.SRC_IN
             )
 
-        quesTitle.podcastImagesHash.forEachIndexed{ index, url->
+        quesTitle.podcastImagesHash.forEachIndexed { index, url ->
 
             val imageUrlFormat =
                 String.format(ProductUrl.imageUrlFormat300X300, url)
 
-            when (index){
-                0->{    holder.iv1.visibility = View.VISIBLE     }
-                1->{    holder.iv2.visibility = View.VISIBLE     }
-                2->{    holder.iv3.visibility = View.VISIBLE     }
-                3->{    holder.iv4.visibility = View.VISIBLE     }
-                4->{    holder.iv5.visibility = View.VISIBLE     }
+            when (index) {
+                0 -> {
+                    holder.iv1.visibility = View.VISIBLE
+                }
+                1 -> {
+                    holder.iv2.visibility = View.VISIBLE
+                }
+                2 -> {
+                    holder.iv3.visibility = View.VISIBLE
+                }
+                3 -> {
+                    holder.iv4.visibility = View.VISIBLE
+                }
+                4 -> {
+                    holder.iv5.visibility = View.VISIBLE
+                }
             }
 
             val imageHolder = when (index) {
@@ -116,9 +123,16 @@ class RecyclerAdapter(
 
     fun setItems(titleList: ArrayList<Question>) {
 
-        this.titleList = titleList
+        this.questionList = titleList
     }
 
+    fun updateList(titleList: ArrayList<Question>) {
+        questionList.clear()
+        questionList.addAll(titleList)
+
+        notifyDataSetChanged()
+
+    }
 
     inner class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -126,7 +140,7 @@ class RecyclerAdapter(
         var creatorName: TextView = itemView.findViewById(R.id.tv2)
         var contributor: TextView = itemView.findViewById(R.id.tv3)
         var clipCount: TextView = itemView.findViewById(R.id.tv4)
-        var hrStr : TextView = itemView.findViewById(R.id.hr)
+        var hrStr: TextView = itemView.findViewById(R.id.hr)
         var hr: TextView = itemView.findViewById(R.id.tv5)
         var min: TextView = itemView.findViewById(R.id.tv6)
 

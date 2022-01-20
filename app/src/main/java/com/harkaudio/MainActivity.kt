@@ -14,14 +14,13 @@ class MainActivity : AppCompatActivity() {
 
     private var navController : LiveData<NavController>? = null
 
-    private lateinit var viewModel: SearchFragmentViewModel
+
 
     @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewModel = ViewModelProviders.of(this)[SearchFragmentViewModel::class.java]
 
 //        setUpNavigation()
 
