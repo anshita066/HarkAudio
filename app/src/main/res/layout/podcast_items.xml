@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="9.42dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="7.58dp"
+    android:background="@drawable/round_corners"
+    android:backgroundTint="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv1"
+        android:layout_width="163dp"
+        android:layout_height="163dp"
+        android:adjustViewBounds="true"
+        android:elevation="10dp"
+        android:background="@drawable/round_corners"
+        app:shapeAppearanceOverlay="@style/rounded"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textSize="16dp"
+        android:lineHeight="17.6dp"
+        tools:text="Hello World"
+        style="@style/GangsterRegular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv1" />
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:lineHeight="17.6dp"
+        tools:text="Hello World"
+        style="@style/GangsterRegular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+    <ImageView
+        android:id="@+id/subscribe_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:layout_marginTop="0.58dp"
+        android:src="@drawable/ic_subscribed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        android:padding="2dp"
+
+        />
+    <TextView
+        android:id="@+id/subscribe_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:lineHeight="17.6dp"
+        tools:text="Subscribe"
+        style="@style/GangsterRegular"
+        app:layout_constraintLeft_toRightOf="@id/subscribe_icon"
+        app:layout_constraintTop_toBottomOf="@id/tv2"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

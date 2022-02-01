@@ -7,6 +7,8 @@
         <item name="fontFamily">@font/sfmono</item></style>
     <style name="LiteracyItalics">
         <item name="fontFamily">@font/literacyitalic</item></style>
+    <style name="Akkurat">
+        <item name="fontFamily">@font/akkurat</item></style>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->

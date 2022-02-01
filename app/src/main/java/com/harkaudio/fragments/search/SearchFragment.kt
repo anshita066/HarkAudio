@@ -8,17 +8,10 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.*
-import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.apidemo.interfaces.SearchRepoImp
 import com.google.android.material.tabs.TabLayout
-import com.harkaudio.RecyclerAdapter
-import com.harkaudio.dataclasses.Question
 import com.harkaudio.replica.R
 import kotlinx.android.synthetic.main.fragment_search.*
 import kotlinx.coroutines.*
-import java.util.*
 
 class SearchFragment : Fragment(R.layout.fragment_search) {
 

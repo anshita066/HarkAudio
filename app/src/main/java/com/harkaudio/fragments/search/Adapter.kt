@@ -2,9 +2,11 @@ package com.harkaudio.fragments.search
 
 import android.content.Context
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.harkaudio.fragments.search.clips.ClipsFragment
+import com.harkaudio.fragments.search.harklist.HarklistFragment
+import com.harkaudio.fragments.search.podcasts.PodcastFragment
+import com.harkaudio.fragments.search.profiles.ProfilesFragment
 
 class MyAdapter(
     var context: Context,

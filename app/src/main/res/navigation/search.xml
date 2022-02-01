@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/search1fragment"
-        android:name="com.harkaudio.fragments.search.HarklistFragment"
+        android:name="com.harkaudio.fragments.search.harklist.HarklistFragment"
         android:label="fragment_find"
         tools:layout="@layout/fragment_harklist" />
 </navigation>
