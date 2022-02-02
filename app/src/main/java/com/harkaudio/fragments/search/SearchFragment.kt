@@ -68,7 +68,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
         val adapter = MyAdapter(
-            activity!!.applicationContext, this,
+            requireActivity().applicationContext, this,
             tabLayout.tabCount
         )
         viewPager.adapter = adapter

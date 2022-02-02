@@ -1,19 +1,19 @@
 package com.harkaudio.fragments.search.podcasts.podcast_interfaces
 
-import Expected
+import Podcast
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.apidemo.interfaces.CustomParser
 import com.google.gson.Gson
-import com.harkaudio.fragments.search.clips.clips_dataclasses.EpisodeDetail
-import com.harkaudio.fragments.search.harklist.harklist_dataclasses.Question
+import com.harkaudio.fragments.search.podcasts.podcast_dataclasses.EpisodeDetail
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class PodcastSearchRepoImp : PodcastSearchRepo, PodcastParser() {
+class PodcastSearchRepoImp : PodcastSearchRepo{
 
     val baseURL = "https://beta-api.harkaudio.com/"
 
@@ -28,41 +28,33 @@ class PodcastSearchRepoImp : PodcastSearchRepo, PodcastParser() {
         from: Int,
         limit: Int,
         searchString: String,
-    ): LiveData<List<Expected>> {
+    ): LiveData<List<EpisodeDetail>> {
 
-        val fetchSearchResponse = MutableLiveData<List<Expected>>()
+        val fetchSearchResponse = MutableLiveData<List<EpisodeDetail>>()
 
-//        service.fetchPodcast(from, limit, searchString)
-//            .enqueue(object : Callback<Object> {
-//                override fun onResponse(
-//                    searchResponse: Call<Object>,
-//                    response: Response<Object>
-//                ) {
-//
-//                    Log.d("Success", "Received callback")
-//
-//                    if (response.isSuccessful) {
-//
-//                        Log.d("Success", "Received callback : ${Gson().toJson(response.body())}")
-//
-//                        //Logic for sending data to Custom parser for parsing
-//
-//                        fetchSearchResponse.value = PodcastParser().parsePodcast(Gson().toJson(response.body()).toString())
-//
-//                    }
-//
-//                }
-//
-//                override fun onFailure(call: Call<Object>, t: Throwable) {
-//
-//                    Log.e("ERROR", t!!.message.toString())
-//                }
-//
-//        })
+        service.fetchPodcast(from, limit, searchString)
+            .enqueue(object : Callback<List<EpisodeDetail>>{
+
+                override fun onResponse(
+                    call: Call<List<EpisodeDetail>>,
+                    response: Response<List<EpisodeDetail>>
+                ) {
+                    if (response.isSuccessful) {
+
+                        Log.d("Success", "Received podcast callback : ${Gson().toJson(response.body())}")
+
+                        fetchSearchResponse.value = response.body()
+
+                    }
+                }
+
+                override fun onFailure(call: Call<List<EpisodeDetail>>, t: Throwable) {
+                    Log.e("ERROR", t!!.message.toString())
+
+                }
+            })
         return fetchSearchResponse
         }
-
-
 }
 
 

@@ -7,11 +7,10 @@
         <gradient
             android:startColor="#000"
             android:endColor="#000"
-            android:gradientRadius="400"
-            android:angle="-270"/>
+            android:gradientRadius="400" />
     </shape>
     </item>
 
-    <item android:drawable="@android:color/white" android:state_selected="false"/>
+    <item android:drawable="@color/appbackground" android:state_selected="false"/>
 
 </selector>

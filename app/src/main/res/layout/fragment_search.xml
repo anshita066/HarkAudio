@@ -75,7 +75,7 @@
         android:layout_marginTop="21dp"
         android:layout_marginRight="16dp"
         app:tabBackground="@drawable/back_select"
-        app:tabSelectedTextColor="@color/white"
+        app:tabSelectedTextColor="@color/appbackground"
         app:tabTextColor="#222222">
 
         <com.google.android.material.tabs.TabItem

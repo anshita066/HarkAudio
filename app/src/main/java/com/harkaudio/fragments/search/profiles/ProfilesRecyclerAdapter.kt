@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.harkaudio.fragments.search.clips.ProductUrlClips
 import com.harkaudio.fragments.search.harklist.harklist_dataclasses.Question
 
 import com.harkaudio.replica.R
@@ -27,6 +29,15 @@ class ProfilesRecyclerAdapter() : Filterable, RecyclerView.Adapter<ProfilesRecyc
         val name = memberName.name ?: "unknown"
 
         holder.heading1.text = name
+        holder.heading2.text = memberName.userName
+
+        val creatorImage = String.format(ProductUrlProfiles.imageUrlFormat, memberName.uid)
+
+        val imageHolder = holder.iv1
+
+        Glide.with(holder.itemView)
+            .load(creatorImage)
+            .into(imageHolder)
 
     }
 

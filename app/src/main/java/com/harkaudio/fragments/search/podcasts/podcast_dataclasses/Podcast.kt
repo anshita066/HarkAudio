@@ -12,8 +12,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Expected (
+data class Podcast (
 
-	@SerializedName("type") val type : String,
-	@SerializedName("required") val required : Boolean
+	@SerializedName("title") val title : String,
+	@SerializedName("artistName") val artistName : String,
+	@SerializedName("collectionId") val collectionId : Int,
+	@SerializedName("collectionViewUrl") val collectionViewUrl : String,
+	@SerializedName("image") val image : String,
+	@SerializedName("releaseData") val releaseData : String,
+	@SerializedName("trackCount") val trackCount : Int,
+	@SerializedName("podcastSlug") val podcastSlug : String,
+	@SerializedName("href") val href : String
 )

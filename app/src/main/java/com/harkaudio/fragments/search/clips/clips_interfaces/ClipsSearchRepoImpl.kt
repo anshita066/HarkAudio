@@ -39,7 +39,7 @@ class ClipsSearchRepoImpl : ClipsSearchRepo, ClipsParser() {
                     response: Response<Object>
                 ) {
 
-                    Log.d("Success", "Received callback")
+                    Log.d("Success", "Received Clip callback")
 
                     if (response.isSuccessful) {
 
