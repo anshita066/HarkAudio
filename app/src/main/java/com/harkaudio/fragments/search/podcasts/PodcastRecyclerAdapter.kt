@@ -28,18 +28,18 @@ class PodcastRecyclerAdapter() : Filterable, RecyclerView.Adapter<PodcastRecycle
     override fun getItemCount(): Int = questionList.size
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
-        val arrayTitle = questionList[position]
+        val podcastList = questionList[position]
 
-        holder.name.text = arrayTitle.name
-        holder.artistName.text = arrayTitle.artistName
+        holder.name.text = podcastList.name
+        holder.artistName.text = podcastList.artistName
 
-        val creatorImage = String.format(ProductUrl.profileImageFormat, arrayTitle.imageHash)
-        val imageHolder = holder.iv1
+        val creatorImage = podcastList.image
 
-        Glide.with(holder.itemView)
+        Glide.with(holder.iv1)
             .load(creatorImage)
-            .into(imageHolder)
+            .into(holder.iv1)
     }
+
 
     fun updateList(titleList: ArrayList<EpisodeDetail>) {
         questionList.clear()

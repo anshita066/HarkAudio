@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Font -->
     <style name="GangsterRegular">
         <item name="fontFamily">@font/gangstergrotesk</item>
     </style>
@@ -9,23 +11,9 @@
         <item name="fontFamily">@font/literacyitalic</item></style>
     <style name="Akkurat">
         <item name="fontFamily">@font/akkurat</item></style>
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/Acid_Green</item>
-        <item name="colorPrimaryDark">@color/Bright_Navy_Blue</item>
-        <item name="colorAccent">@color/Blood_Red</item>
+
+    <style name="MyCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">13sp</item>
     </style>
-
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="AppTheme.AppBarOverlay"
-        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.PopupOverlay"
-        parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

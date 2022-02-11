@@ -7,8 +7,7 @@
     android:layout_marginTop="9.42dp"
     android:layout_marginEnd="16dp"
     android:layout_marginBottom="7.58dp"
-    android:background="@drawable/round_corners"
-    android:backgroundTint="@color/white"
+    android:backgroundTint="@color/appbackground"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.imageview.ShapeableImageView

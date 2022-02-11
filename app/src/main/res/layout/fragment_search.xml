@@ -11,52 +11,61 @@
         android:id="@+id/searchicon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="26dp"
-        android:src="@drawable/ic_search" />
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="29dp"
+        android:contentDescription="search_icon"
+        android:src="@drawable/ic_search"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/editsearch"
         android:layout_width="220dp"
-        android:layout_height="28dp"
-        android:layout_marginLeft="15dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="23dp"
-        android:layout_toRightOf="@id/searchicon"
+        android:layout_toEndOf="@id/searchicon"
         android:background="@color/transparent"
-        android:hint="Search" />
+        android:hint="Search"
+        android:importantForAutofill="no"
+        android:text="future"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText,TextFields" />
 
     <ImageView
         android:id="@+id/closeicon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/editsearch"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="29dp"
+        android:layout_toEndOf="@+id/editsearch"
+        android:contentDescription="close_icon"
         android:src="@drawable/ic_close"
-        android:layout_marginTop="29.99dp"
-        android:layout_marginLeft="16dp"/>
+        tools:ignore="HardcodedText" />
 
     <TextView
         style="@style/GangsterRegular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="29dp"
-        android:layout_marginLeft="50dp"
-        android:layout_toRightOf="@+id/editsearch"
+        android:layout_toEndOf="@+id/editsearch"
+        android:padding="2dp"
         android:text="Cancel"
-        android:textSize="14dp"
-        android:lineHeight="15.4dp"
         android:textAlignment="center"
         android:textColor="#222222"
-        android:textFontWeight="400"
-        />
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/line"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
         android:layout_alignTop="@id/editsearch"
+        android:layout_marginStart="14dp"
         android:layout_marginTop="36dp"
-        android:src="@drawable/ic_line_7" />
+        android:contentDescription="cancel"
+        android:src="@drawable/ic_line_7"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/tv_display"
@@ -64,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/tabLayout"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="16dp"/>
+        android:layout_marginStart="16dp"/>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -76,32 +85,38 @@
         android:layout_marginRight="16dp"
         app:tabBackground="@drawable/back_select"
         app:tabSelectedTextColor="@color/appbackground"
-        app:tabTextColor="#222222">
+        app:tabTextAppearance="@style/MyCustomTabText"
+        app:tabTextColor="#222222"
+        app:tabIndicatorHeight="0dp">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/Harklisttab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Harklist" />
+            android:text="Harklist"
+            tools:ignore="HardcodedText" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/clipstab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clips" />
+            android:text="Clips"
+            tools:ignore="HardcodedText" />
 
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/Profiletab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profile" />
+            android:text="Profile"
+            tools:ignore="HardcodedText" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/Podcasttab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Podcast" />
+            android:text="Podcast"
+            tools:ignore="HardcodedText" />
 
     </com.google.android.material.tabs.TabLayout>
 
@@ -112,7 +127,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
@@ -120,8 +134,6 @@
         android:layout_below="@id/tabLayout"
         android:layout_centerInParent="true"
         android:layout_marginTop="0dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"/>
 
-
-    </androidx.viewpager2.widget.ViewPager2>
 </RelativeLayout>

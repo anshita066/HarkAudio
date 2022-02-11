@@ -31,7 +31,7 @@ class ProfilesRecyclerAdapter() : Filterable, RecyclerView.Adapter<ProfilesRecyc
         holder.heading1.text = name
         holder.heading2.text = memberName.userName
 
-        val creatorImage = String.format(ProductUrlProfiles.imageUrlFormat, memberName.uid)
+        val creatorImage = String.format(ProductUrlProfiles.profileImageFormat, memberName.uid)
 
         val imageHolder = holder.iv1
 

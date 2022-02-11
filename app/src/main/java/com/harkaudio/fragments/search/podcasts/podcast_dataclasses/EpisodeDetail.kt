@@ -14,9 +14,9 @@ data class EpisodeDetail (
 	@SerializedName("href") val href : String,
 	@SerializedName("image") val image : String,
 	@SerializedName("isClaimed") val isClaimed : Boolean,
-	@SerializedName("name") val name : String? =null,
+	@SerializedName("name",alternate = ["title"]) val name : String? =null,
 	@SerializedName("podcastSlug") val podcastSlug : String,
-	@SerializedName("podcast_name") val podcast_name : String,
+	@SerializedName("podcast_name") val podcaodcastImagest_name : String,
 	@SerializedName("pubDate") val pubDate : Long,
 //	@SerializedName("startTime") val startTime : Int,
 	@SerializedName("type") val type : String,
@@ -25,5 +25,5 @@ data class EpisodeDetail (
 	@SerializedName("clipAudioDuration") val clipAudioDuration : Int? =null,
 	@SerializedName("clipAudioUrl") val clipAudioUrl : String? =null,
 	@SerializedName("podcastImage") val podcastImage : String? =null,
-	@SerializedName("podcastImageHash") val podcastImageHash : String? =null
+	@SerializedName("podcastImageHash") val pHash : String? =null
 )

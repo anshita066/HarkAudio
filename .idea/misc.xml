@@ -20,7 +20,7 @@
         <entry key="app/src/main/res/drawable/round_corners.xml" value="0.209375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="app/src/main/res/layout/clip_items.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/data_items.xml" value="0.17" />
+        <entry key="app/src/main/res/layout/data_items.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_bookmark.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_bookmark1.xml" value="0.12454710144927536" />
@@ -42,7 +42,7 @@
         <entry key="app/src/main/res/layout/fragment_profiles.xml" value="0.17300724637681159" />
         <entry key="app/src/main/res/layout/fragment_saved.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_saved_bookmark.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_search1.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_search2.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/fragment_search3.xml" value="0.12454710144927536" />
