@@ -4,6 +4,8 @@ import Member
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.airbnb.epoxy.EpoxyModelClass
+import com.harkaudio.replica.R
 
 class ProfilesViewModel : ViewModel()  {
 

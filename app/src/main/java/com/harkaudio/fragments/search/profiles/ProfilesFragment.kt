@@ -1,12 +1,14 @@
 package com.harkaudio.fragments.search.profiles
 
 import Member
+import android.graphics.Rect
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.harkaudio.fragments.search.SearchFragment
+import com.harkaudio.fragments.search.clips.ClipsEpoxyController
 import com.harkaudio.fragments.search.clips.ClipsRecyclerAdapter
 import com.harkaudio.fragments.search.clips.ClipsViewModel
 import com.harkaudio.fragments.search.clips.clips_dataclasses.Answer
@@ -26,11 +29,11 @@ import kotlinx.android.synthetic.main.fragment_profiles.*
 
 class ProfilesFragment : Fragment() {
 
-    private lateinit var myAdapter : ProfilesRecyclerAdapter
-    private var layoutManager: RecyclerView.LayoutManager? = null
-    val clipsSearchRepoImpl = ProfilesSearchRepoImp()
+//    private lateinit var myAdapter : ProfilesRecyclerAdapter
+//    private var layoutManager: RecyclerView.LayoutManager? = null
+//    val clipsSearchRepoImpl = ProfilesSearchRepoImp()
 
-    lateinit var viewModel: ProfilesViewModel
+//    lateinit var viewModel: ProfilesViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -44,46 +47,53 @@ class ProfilesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this,
-            ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)).get(
-            ProfilesViewModel::class.java)
-
-        viewModel.profilesItemLiveData.observe(viewLifecycleOwner, Observer {
-
-            myAdapter.updateList(it as ArrayList<Member>)
-            myAdapter.notifyDataSetChanged()
-        })
-
-        layoutManager = LinearLayoutManager(context)
-
-        myAdapter = ProfilesRecyclerAdapter()
-
-        val recyclerview = rv_title_profiles
-
-        recyclerview.layoutManager  = layoutManager
-
-        recyclerview.adapter = myAdapter
-
-        recyclerview.apply {
-            addItemDecoration(DividerItemDecoration(this.context, DividerItemDecoration.VERTICAL))
-        }
-        if (parentFragment is SearchFragment){
-            (parentFragment as SearchFragment).textChangeLiveData.observe(viewLifecycleOwner, Observer {
-                Log.i("ClipFragment", "text updated: $it")
-
-                if(it.isNotBlank()) {
-                    clipsSearchRepoImpl.fetchProfilesSearch(0, 20, it, "members")
-                        .observe(viewLifecycleOwner, Observer {
-                            // Logic for UI
-
-                            Log.d("MAIN ACTIVITY", "get title")
-
-                            viewModel.updateProfiles(it as ArrayList<Member>)
-
-                        })
-                }
-            })
-        }
+        val controller = ProfilesEpoxyController()
+        epoxy_profiles.setController(controller)
+//        viewModel = ViewModelProvider(this,
+//            ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)).get(
+//            ProfilesViewModel::class.java)
+//
+//        viewModel.profilesItemLiveData.observe(viewLifecycleOwner, Observer {
+//
+//            myAdapter.updateList(it as ArrayList<Member>)
+//            myAdapter.notifyDataSetChanged()
+//        })
+//
+//        layoutManager = LinearLayoutManager(context)
+//
+//        myAdapter = ProfilesRecyclerAdapter()
+//
+//        val recyclerview = rv_title_profiles
+//
+//        recyclerview.layoutManager  = layoutManager
+//
+//        recyclerview.adapter = myAdapter
+//
+//        recyclerview.apply {
+//            var itemDecoration = DividerItemDecoration(requireActivity(), DividerItemDecoration.VERTICAL)
+//            ContextCompat.getDrawable(requireActivity(),R.drawable.divider)
+//                ?.let { itemDecoration.setDrawable(it) }
+//
+//            addItemDecoration(itemDecoration)
+//
+//        }
+//        if (parentFragment is SearchFragment){
+//            (parentFragment as SearchFragment).textChangeLiveData.observe(viewLifecycleOwner, Observer {
+//                Log.i("ClipFragment", "text updated: $it")
+//
+//                if(it.isNotBlank()) {
+//                    clipsSearchRepoImpl.fetchProfilesSearch(0, 20, it, "members")
+//                        .observe(viewLifecycleOwner, Observer {
+//                            // Logic for UI
+//
+//                            Log.d("MAIN ACTIVITY", "get title")
+//
+//                            viewModel.updateProfiles(it as ArrayList<Member>)
+//
+//                        })
+//                }
+//            })
+//        }
 
     }
 }

@@ -7,10 +7,14 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_title_profiles"
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/epoxy_profiles"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
-
+        android:layout_height="match_parent" />
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_title_profiles"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        >-->
+<!--    </androidx.recyclerview.widget.RecyclerView>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

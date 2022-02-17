@@ -1,13 +1,26 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:padding="16dp">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_title_podcast"
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/epoxy_podcast"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/podcast_items"/>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_title_podcast"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+<!--        tools:listitem="@layout/podcast_items"-->
+<!--        />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

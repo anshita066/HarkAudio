@@ -32,47 +32,50 @@ class HarklistFragment : Fragment() {
         return inflater.inflate(
             R.layout.fragment_harklist, container, false
         )
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this,
-            ViewModelProvider.AndroidViewModelFactory.getInstance(activity!!.application)).get(
-            HarklistViewModel::class.java)
+        //  Through Epoxy
+        val controller = HarklistEpoxyController()
+        epoxy_harklist.setController(controller)
 
-        viewModel.harklistItemLiveData.observe(this, Observer {
+//        viewModel = ViewModelProvider(this,
+//            ViewModelProvider.AndroidViewModelFactory.getInstance(activity!!.application)).get(
+//            HarklistViewModel::class.java)
+//
+//        viewModel.harklistItemLiveData.observe(this, Observer {
+//
+//            myAdapter.updateList(it as ArrayList<Question>)
+//            myAdapter.notifyDataSetChanged()
+//        })
+//
+//        layoutManager = LinearLayoutManager(context)
+//
+//        myAdapter = HarklistRecyclerAdapter()
+//        val recyclerview = rv_title
 
-            myAdapter.updateList(it as ArrayList<Question>)
-            myAdapter.notifyDataSetChanged()
-        })
+//        recyclerview.layoutManager  = layoutManager
 
-        layoutManager = LinearLayoutManager(context)
+//        recyclerview.adapter = myAdapter
 
-        myAdapter = HarklistRecyclerAdapter()
-        val recyclerview = rv_title
-
-        recyclerview.layoutManager  = layoutManager
-
-        recyclerview.adapter = myAdapter
-
-        if (parentFragment is SearchFragment){
-            (parentFragment as SearchFragment).textChangeLiveData.observe(viewLifecycleOwner, Observer {
-                Log.i("HarklistFragment", "text updated: $it")
-
-                if(it.isNotBlank()) {
-                    searchRepoImp.fetchSearchHarkList(0, 20, it, "playlist")
-                        .observe(this, Observer {
-                            // Logic for UI
-
-                        Log.d("MAIN ACTIVITY", "get title")
-
-                            viewModel.updateHarkList(it as ArrayList<Question>)
-
-                    })
-                }
-            })
-        }
+//        if (parentFragment is SearchFragment){
+//            (parentFragment as SearchFragment).textChangeLiveData.observe(viewLifecycleOwner, Observer {
+//                Log.i("HarklistFragment", "text updated: $it")
+//
+//                if(it.isNotBlank()) {
+//                    searchRepoImp.fetchSearchHarkList(0, 20, it, "playlist")
+//                        .observe(this, Observer {
+//                            // Logic for UI
+//
+//                        Log.d("MAIN ACTIVITY", "get title")
+//
+//                            viewModel.updateHarkList(it as ArrayList<Question>)
+//
+//                    })
+//                }
+//            })
+//        }
     }
 }

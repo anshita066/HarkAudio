@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="16dp"
+    android:layout_marginStart="20dp"
     android:layout_marginTop="9.42dp"
-    android:layout_marginEnd="16dp"
+    android:layout_marginEnd="20dp"
     android:layout_marginBottom="7.58dp"
     android:backgroundTint="@color/appbackground"
+    android:layout_margin="16dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -23,10 +24,10 @@
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16dp"
-        android:lineHeight="17.6dp"
+        android:textSize="16sp"
         tools:text="Hello World"
         style="@style/GangsterRegular"
+        android:textColor="#222222"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv1" />
     <TextView
@@ -34,9 +35,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:lineHeight="17.6dp"
+        android:textSize="12sp"
         tools:text="Hello World"
-        style="@style/GangsterRegular"
+        style="@style/Akkurat"
+        android:textColor="#222222"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv1" />
 
@@ -45,10 +47,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="19dp"
-        android:layout_marginTop="0.58dp"
+        android:layout_marginBottom="1dp"
         android:src="@drawable/ic_subscribe"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv2"
         android:padding="2dp"
 
         />
@@ -56,12 +59,15 @@
         android:id="@+id/subscribe_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:lineHeight="17.6dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="16sp"
         android:text="Subscribe"
-        style="@style/GangsterRegular"
+        android:textColor="#222222"
+        style="@style/Akkurat"
         app:layout_constraintLeft_toRightOf="@id/subscribe_icon"
-        app:layout_constraintTop_toBottomOf="@id/tv2"
+        app:layout_constraintTop_toBottomOf="@+id/tv2"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
